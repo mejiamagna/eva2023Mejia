@@ -1,0 +1,27 @@
+<span *ngIf="listadoCarreras.length == 0">No existen contactos</span>
+
+<div class="col">
+  <div class="card mb-2">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">MODALIDAD</th>
+            <th scope="col">CICLOS</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of listadoCarreras">
+            <td>{{ item.id }}</td>
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.modalidad }}</td>
+            <td>{{ item.ciclos }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
